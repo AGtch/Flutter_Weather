@@ -24,6 +24,7 @@ mixin _$HourlyForecastState<T> {
     required TResult Function(NetworkExceptions error) HourlyForecastError,
   }) =>
       throw _privateConstructorUsedError;
+
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? HourlyForecastIdle,
@@ -41,6 +42,7 @@ mixin _$HourlyForecastState<T> {
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
+
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(HourlyForecastIdle<T> value) HourlyForecastIdle,
@@ -51,6 +53,7 @@ mixin _$HourlyForecastState<T> {
     required TResult Function(HourlyForecastError<T> value) HourlyForecastError,
   }) =>
       throw _privateConstructorUsedError;
+
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(HourlyForecastIdle<T> value)? HourlyForecastIdle,
@@ -87,6 +90,7 @@ class _$HourlyForecastStateCopyWithImpl<T, $Res,
 
   // ignore: unused_field
   final $Val _value;
+
   // ignore: unused_field
   final $Res Function($Val) _then;
 }
@@ -335,6 +339,7 @@ abstract class _$$HourlyForecastSuccessStateCopyWith<T, $Res> {
           _$HourlyForecastSuccessState<T> value,
           $Res Function(_$HourlyForecastSuccessState<T>) then) =
       __$$HourlyForecastSuccessStateCopyWithImpl<T, $Res>;
+
   @useResult
   $Res call({T data});
 }
@@ -479,6 +484,7 @@ abstract class HourlyForecastSuccessState<T> implements HourlyForecastState<T> {
       _$HourlyForecastSuccessState<T>;
 
   T get data;
+
   @JsonKey(ignore: true)
   _$$HourlyForecastSuccessStateCopyWith<T, _$HourlyForecastSuccessState<T>>
       get copyWith => throw _privateConstructorUsedError;
@@ -489,6 +495,7 @@ abstract class _$$HourlyForecastErrorCopyWith<T, $Res> {
   factory _$$HourlyForecastErrorCopyWith(_$HourlyForecastError<T> value,
           $Res Function(_$HourlyForecastError<T>) then) =
       __$$HourlyForecastErrorCopyWithImpl<T, $Res>;
+
   @useResult
   $Res call({NetworkExceptions error});
 
@@ -640,6 +647,7 @@ abstract class HourlyForecastError<T> implements HourlyForecastState<T> {
       _$HourlyForecastError<T>;
 
   NetworkExceptions get error;
+
   @JsonKey(ignore: true)
   _$$HourlyForecastErrorCopyWith<T, _$HourlyForecastError<T>> get copyWith =>
       throw _privateConstructorUsedError;

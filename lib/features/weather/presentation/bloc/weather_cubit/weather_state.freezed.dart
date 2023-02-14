@@ -20,14 +20,17 @@ mixin _$WeatherResultState<T> {
   TResult when<TResult extends Object?>({
     required TResult Function() idle,
     required TResult Function() loading,
+    required TResult Function() noPermission,
     required TResult Function(T data) successState,
     required TResult Function(NetworkExceptions error) error,
   }) =>
       throw _privateConstructorUsedError;
+
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? idle,
     TResult? Function()? loading,
+    TResult? Function()? noPermission,
     TResult? Function(T data)? successState,
     TResult? Function(NetworkExceptions error)? error,
   }) =>
@@ -36,23 +39,28 @@ mixin _$WeatherResultState<T> {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? idle,
     TResult Function()? loading,
+    TResult Function()? noPermission,
     TResult Function(T data)? successState,
     TResult Function(NetworkExceptions error)? error,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
+
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(Idle<T> value) idle,
     required TResult Function(Loading<T> value) loading,
+    required TResult Function(NoPermission<T> value) noPermission,
     required TResult Function(SuccessState<T> value) successState,
     required TResult Function(Error<T> value) error,
   }) =>
       throw _privateConstructorUsedError;
+
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(Idle<T> value)? idle,
     TResult? Function(Loading<T> value)? loading,
+    TResult? Function(NoPermission<T> value)? noPermission,
     TResult? Function(SuccessState<T> value)? successState,
     TResult? Function(Error<T> value)? error,
   }) =>
@@ -61,6 +69,7 @@ mixin _$WeatherResultState<T> {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(Idle<T> value)? idle,
     TResult Function(Loading<T> value)? loading,
+    TResult Function(NoPermission<T> value)? noPermission,
     TResult Function(SuccessState<T> value)? successState,
     TResult Function(Error<T> value)? error,
     required TResult orElse(),
@@ -83,6 +92,7 @@ class _$WeatherResultStateCopyWithImpl<T, $Res,
 
   // ignore: unused_field
   final $Val _value;
+
   // ignore: unused_field
   final $Res Function($Val) _then;
 }
@@ -125,6 +135,7 @@ class _$Idle<T> implements Idle<T> {
   TResult when<TResult extends Object?>({
     required TResult Function() idle,
     required TResult Function() loading,
+    required TResult Function() noPermission,
     required TResult Function(T data) successState,
     required TResult Function(NetworkExceptions error) error,
   }) {
@@ -136,6 +147,7 @@ class _$Idle<T> implements Idle<T> {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? idle,
     TResult? Function()? loading,
+    TResult? Function()? noPermission,
     TResult? Function(T data)? successState,
     TResult? Function(NetworkExceptions error)? error,
   }) {
@@ -147,6 +159,7 @@ class _$Idle<T> implements Idle<T> {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? idle,
     TResult Function()? loading,
+    TResult Function()? noPermission,
     TResult Function(T data)? successState,
     TResult Function(NetworkExceptions error)? error,
     required TResult orElse(),
@@ -162,6 +175,7 @@ class _$Idle<T> implements Idle<T> {
   TResult map<TResult extends Object?>({
     required TResult Function(Idle<T> value) idle,
     required TResult Function(Loading<T> value) loading,
+    required TResult Function(NoPermission<T> value) noPermission,
     required TResult Function(SuccessState<T> value) successState,
     required TResult Function(Error<T> value) error,
   }) {
@@ -173,6 +187,7 @@ class _$Idle<T> implements Idle<T> {
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(Idle<T> value)? idle,
     TResult? Function(Loading<T> value)? loading,
+    TResult? Function(NoPermission<T> value)? noPermission,
     TResult? Function(SuccessState<T> value)? successState,
     TResult? Function(Error<T> value)? error,
   }) {
@@ -184,6 +199,7 @@ class _$Idle<T> implements Idle<T> {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(Idle<T> value)? idle,
     TResult Function(Loading<T> value)? loading,
+    TResult Function(NoPermission<T> value)? noPermission,
     TResult Function(SuccessState<T> value)? successState,
     TResult Function(Error<T> value)? error,
     required TResult orElse(),
@@ -239,6 +255,7 @@ class _$Loading<T> implements Loading<T> {
   TResult when<TResult extends Object?>({
     required TResult Function() idle,
     required TResult Function() loading,
+    required TResult Function() noPermission,
     required TResult Function(T data) successState,
     required TResult Function(NetworkExceptions error) error,
   }) {
@@ -250,6 +267,7 @@ class _$Loading<T> implements Loading<T> {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? idle,
     TResult? Function()? loading,
+    TResult? Function()? noPermission,
     TResult? Function(T data)? successState,
     TResult? Function(NetworkExceptions error)? error,
   }) {
@@ -261,6 +279,7 @@ class _$Loading<T> implements Loading<T> {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? idle,
     TResult Function()? loading,
+    TResult Function()? noPermission,
     TResult Function(T data)? successState,
     TResult Function(NetworkExceptions error)? error,
     required TResult orElse(),
@@ -276,6 +295,7 @@ class _$Loading<T> implements Loading<T> {
   TResult map<TResult extends Object?>({
     required TResult Function(Idle<T> value) idle,
     required TResult Function(Loading<T> value) loading,
+    required TResult Function(NoPermission<T> value) noPermission,
     required TResult Function(SuccessState<T> value) successState,
     required TResult Function(Error<T> value) error,
   }) {
@@ -287,6 +307,7 @@ class _$Loading<T> implements Loading<T> {
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(Idle<T> value)? idle,
     TResult? Function(Loading<T> value)? loading,
+    TResult? Function(NoPermission<T> value)? noPermission,
     TResult? Function(SuccessState<T> value)? successState,
     TResult? Function(Error<T> value)? error,
   }) {
@@ -298,6 +319,7 @@ class _$Loading<T> implements Loading<T> {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(Idle<T> value)? idle,
     TResult Function(Loading<T> value)? loading,
+    TResult Function(NoPermission<T> value)? noPermission,
     TResult Function(SuccessState<T> value)? successState,
     TResult Function(Error<T> value)? error,
     required TResult orElse(),
@@ -314,10 +336,131 @@ abstract class Loading<T> implements WeatherResultState<T> {
 }
 
 /// @nodoc
+abstract class _$$NoPermissionCopyWith<T, $Res> {
+  factory _$$NoPermissionCopyWith(
+          _$NoPermission<T> value, $Res Function(_$NoPermission<T>) then) =
+      __$$NoPermissionCopyWithImpl<T, $Res>;
+}
+
+/// @nodoc
+class __$$NoPermissionCopyWithImpl<T, $Res>
+    extends _$WeatherResultStateCopyWithImpl<T, $Res, _$NoPermission<T>>
+    implements _$$NoPermissionCopyWith<T, $Res> {
+  __$$NoPermissionCopyWithImpl(
+      _$NoPermission<T> _value, $Res Function(_$NoPermission<T>) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$NoPermission<T> implements NoPermission<T> {
+  const _$NoPermission();
+
+  @override
+  String toString() {
+    return 'WeatherResultState<$T>.noPermission()';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$NoPermission<T>);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() idle,
+    required TResult Function() loading,
+    required TResult Function() noPermission,
+    required TResult Function(T data) successState,
+    required TResult Function(NetworkExceptions error) error,
+  }) {
+    return noPermission();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? idle,
+    TResult? Function()? loading,
+    TResult? Function()? noPermission,
+    TResult? Function(T data)? successState,
+    TResult? Function(NetworkExceptions error)? error,
+  }) {
+    return noPermission?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? idle,
+    TResult Function()? loading,
+    TResult Function()? noPermission,
+    TResult Function(T data)? successState,
+    TResult Function(NetworkExceptions error)? error,
+    required TResult orElse(),
+  }) {
+    if (noPermission != null) {
+      return noPermission();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(Idle<T> value) idle,
+    required TResult Function(Loading<T> value) loading,
+    required TResult Function(NoPermission<T> value) noPermission,
+    required TResult Function(SuccessState<T> value) successState,
+    required TResult Function(Error<T> value) error,
+  }) {
+    return noPermission(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(Idle<T> value)? idle,
+    TResult? Function(Loading<T> value)? loading,
+    TResult? Function(NoPermission<T> value)? noPermission,
+    TResult? Function(SuccessState<T> value)? successState,
+    TResult? Function(Error<T> value)? error,
+  }) {
+    return noPermission?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(Idle<T> value)? idle,
+    TResult Function(Loading<T> value)? loading,
+    TResult Function(NoPermission<T> value)? noPermission,
+    TResult Function(SuccessState<T> value)? successState,
+    TResult Function(Error<T> value)? error,
+    required TResult orElse(),
+  }) {
+    if (noPermission != null) {
+      return noPermission(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class NoPermission<T> implements WeatherResultState<T> {
+  const factory NoPermission() = _$NoPermission<T>;
+}
+
+/// @nodoc
 abstract class _$$SuccessStateCopyWith<T, $Res> {
   factory _$$SuccessStateCopyWith(
           _$SuccessState<T> value, $Res Function(_$SuccessState<T>) then) =
       __$$SuccessStateCopyWithImpl<T, $Res>;
+
   @useResult
   $Res call({T data});
 }
@@ -380,6 +523,7 @@ class _$SuccessState<T> implements SuccessState<T> {
   TResult when<TResult extends Object?>({
     required TResult Function() idle,
     required TResult Function() loading,
+    required TResult Function() noPermission,
     required TResult Function(T data) successState,
     required TResult Function(NetworkExceptions error) error,
   }) {
@@ -391,6 +535,7 @@ class _$SuccessState<T> implements SuccessState<T> {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? idle,
     TResult? Function()? loading,
+    TResult? Function()? noPermission,
     TResult? Function(T data)? successState,
     TResult? Function(NetworkExceptions error)? error,
   }) {
@@ -402,6 +547,7 @@ class _$SuccessState<T> implements SuccessState<T> {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? idle,
     TResult Function()? loading,
+    TResult Function()? noPermission,
     TResult Function(T data)? successState,
     TResult Function(NetworkExceptions error)? error,
     required TResult orElse(),
@@ -417,6 +563,7 @@ class _$SuccessState<T> implements SuccessState<T> {
   TResult map<TResult extends Object?>({
     required TResult Function(Idle<T> value) idle,
     required TResult Function(Loading<T> value) loading,
+    required TResult Function(NoPermission<T> value) noPermission,
     required TResult Function(SuccessState<T> value) successState,
     required TResult Function(Error<T> value) error,
   }) {
@@ -428,6 +575,7 @@ class _$SuccessState<T> implements SuccessState<T> {
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(Idle<T> value)? idle,
     TResult? Function(Loading<T> value)? loading,
+    TResult? Function(NoPermission<T> value)? noPermission,
     TResult? Function(SuccessState<T> value)? successState,
     TResult? Function(Error<T> value)? error,
   }) {
@@ -439,6 +587,7 @@ class _$SuccessState<T> implements SuccessState<T> {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(Idle<T> value)? idle,
     TResult Function(Loading<T> value)? loading,
+    TResult Function(NoPermission<T> value)? noPermission,
     TResult Function(SuccessState<T> value)? successState,
     TResult Function(Error<T> value)? error,
     required TResult orElse(),
@@ -454,6 +603,7 @@ abstract class SuccessState<T> implements WeatherResultState<T> {
   factory SuccessState(final T data) = _$SuccessState<T>;
 
   T get data;
+
   @JsonKey(ignore: true)
   _$$SuccessStateCopyWith<T, _$SuccessState<T>> get copyWith =>
       throw _privateConstructorUsedError;
@@ -463,6 +613,7 @@ abstract class SuccessState<T> implements WeatherResultState<T> {
 abstract class _$$ErrorCopyWith<T, $Res> {
   factory _$$ErrorCopyWith(_$Error<T> value, $Res Function(_$Error<T>) then) =
       __$$ErrorCopyWithImpl<T, $Res>;
+
   @useResult
   $Res call({NetworkExceptions error});
 
@@ -533,6 +684,7 @@ class _$Error<T> implements Error<T> {
   TResult when<TResult extends Object?>({
     required TResult Function() idle,
     required TResult Function() loading,
+    required TResult Function() noPermission,
     required TResult Function(T data) successState,
     required TResult Function(NetworkExceptions error) error,
   }) {
@@ -544,6 +696,7 @@ class _$Error<T> implements Error<T> {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? idle,
     TResult? Function()? loading,
+    TResult? Function()? noPermission,
     TResult? Function(T data)? successState,
     TResult? Function(NetworkExceptions error)? error,
   }) {
@@ -555,6 +708,7 @@ class _$Error<T> implements Error<T> {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? idle,
     TResult Function()? loading,
+    TResult Function()? noPermission,
     TResult Function(T data)? successState,
     TResult Function(NetworkExceptions error)? error,
     required TResult orElse(),
@@ -570,6 +724,7 @@ class _$Error<T> implements Error<T> {
   TResult map<TResult extends Object?>({
     required TResult Function(Idle<T> value) idle,
     required TResult Function(Loading<T> value) loading,
+    required TResult Function(NoPermission<T> value) noPermission,
     required TResult Function(SuccessState<T> value) successState,
     required TResult Function(Error<T> value) error,
   }) {
@@ -581,6 +736,7 @@ class _$Error<T> implements Error<T> {
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(Idle<T> value)? idle,
     TResult? Function(Loading<T> value)? loading,
+    TResult? Function(NoPermission<T> value)? noPermission,
     TResult? Function(SuccessState<T> value)? successState,
     TResult? Function(Error<T> value)? error,
   }) {
@@ -592,6 +748,7 @@ class _$Error<T> implements Error<T> {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(Idle<T> value)? idle,
     TResult Function(Loading<T> value)? loading,
+    TResult Function(NoPermission<T> value)? noPermission,
     TResult Function(SuccessState<T> value)? successState,
     TResult Function(Error<T> value)? error,
     required TResult orElse(),
@@ -607,6 +764,7 @@ abstract class Error<T> implements WeatherResultState<T> {
   const factory Error({required final NetworkExceptions error}) = _$Error<T>;
 
   NetworkExceptions get error;
+
   @JsonKey(ignore: true)
   _$$ErrorCopyWith<T, _$Error<T>> get copyWith =>
       throw _privateConstructorUsedError;

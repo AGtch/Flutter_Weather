@@ -9,6 +9,8 @@ class WeatherResultState<T> with _$WeatherResultState<T> {
 
   const factory WeatherResultState.loading() = Loading<T>;
 
+  const factory WeatherResultState.noPermission() = NoPermission<T>;
+
   factory WeatherResultState.successState(T data) = SuccessState<T>;
 
   const factory WeatherResultState.error({required NetworkExceptions error}) =

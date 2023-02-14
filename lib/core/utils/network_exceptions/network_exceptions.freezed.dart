@@ -37,6 +37,7 @@ mixin _$NetworkExceptions {
     required TResult Function() notTheSameSubtype,
   }) =>
       throw _privateConstructorUsedError;
+
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? requestCancelled,
@@ -80,6 +81,7 @@ mixin _$NetworkExceptions {
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
+
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(RequestCancelled value) requestCancelled,
@@ -101,6 +103,7 @@ mixin _$NetworkExceptions {
     required TResult Function(NotTheSameSubtype value) notTheSameSubtype,
   }) =>
       throw _privateConstructorUsedError;
+
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(RequestCancelled value)? requestCancelled,
@@ -160,6 +163,7 @@ class _$NetworkExceptionsCopyWithImpl<$Res, $Val extends NetworkExceptions>
 
   // ignore: unused_field
   final $Val _value;
+
   // ignore: unused_field
   final $Res Function($Val) _then;
 }
@@ -361,6 +365,7 @@ abstract class _$$UnauthorizedRequestCopyWith<$Res> {
   factory _$$UnauthorizedRequestCopyWith(_$UnauthorizedRequest value,
           $Res Function(_$UnauthorizedRequest) then) =
       __$$UnauthorizedRequestCopyWithImpl<$Res>;
+
   @useResult
   $Res call({String errorMessage});
 }
@@ -577,6 +582,7 @@ abstract class UnauthorizedRequest implements NetworkExceptions {
       _$UnauthorizedRequest;
 
   String get errorMessage;
+
   @JsonKey(ignore: true)
   _$$UnauthorizedRequestCopyWith<_$UnauthorizedRequest> get copyWith =>
       throw _privateConstructorUsedError;
@@ -779,6 +785,7 @@ abstract class _$$NotFoundCopyWith<$Res> {
   factory _$$NotFoundCopyWith(
           _$NotFound value, $Res Function(_$NotFound) then) =
       __$$NotFoundCopyWithImpl<$Res>;
+
   @useResult
   $Res call({String reason});
 }
@@ -991,6 +998,7 @@ abstract class NotFound implements NetworkExceptions {
   const factory NotFound(final String reason) = _$NotFound;
 
   String get reason;
+
   @JsonKey(ignore: true)
   _$$NotFoundCopyWith<_$NotFound> get copyWith =>
       throw _privateConstructorUsedError;
@@ -2920,6 +2928,7 @@ abstract class _$$DefaultErrorCopyWith<$Res> {
   factory _$$DefaultErrorCopyWith(
           _$DefaultError value, $Res Function(_$DefaultError) then) =
       __$$DefaultErrorCopyWithImpl<$Res>;
+
   @useResult
   $Res call({String error});
 }
@@ -3133,6 +3142,7 @@ abstract class DefaultError implements NetworkExceptions {
   const factory DefaultError(final String error) = _$DefaultError;
 
   String get error;
+
   @JsonKey(ignore: true)
   _$$DefaultErrorCopyWith<_$DefaultError> get copyWith =>
       throw _privateConstructorUsedError;

@@ -3,16 +3,11 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_weather/features/weather/data/repositories/imp_weather_repository.dart';
 import 'package:flutter_weather/features/weather/presentation/bloc/hourly_forecast/hourly_forecast_cubit.dart';
-import 'package:flutter_weather/features/weather/presentation/bloc/position_cubit/position_cubit.dart';
 import 'package:flutter_weather/features/weather/presentation/bloc/weather_cubit/weather_cubit.dart';
 import 'package:flutter_weather/features/weather/presentation/screens/today_weather.dart';
-import 'package:flutter_weather/features/weather/presentation/screens/week_weather.dart';
 import 'package:flutter_weather/injector.dart';
-import 'package:geolocator/geolocator.dart';
 
 class HomePage extends StatefulWidget {
-  // late final PositionCubit positionCubit;
-
   HomePage({
     Key? key,
   }) : super(key: key);
@@ -23,17 +18,10 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
   int selectedIndex = 0;
-  late Position position;
 
+  // late Position position;
   bool todayIsSelected = true;
   bool weekIsSelected = false;
-
-  @override
-  initState() {
-    // TODO: implement initState
-    super.initState();
-    BlocProvider.of<PositionCubit>(context).handleLocationPermission(context);
-  }
 
   @override
   Widget build(BuildContext context) {
@@ -52,23 +40,9 @@ class _HomePageState extends State<HomePage> {
             ),
           ),
         ],
-        child: BlocBuilder<PositionCubit, PositionState>(
-          builder: (context, state) {
-            if (state is PositionReady) {
-              position = state.position;
-            } else {
-              return Center(
-                child: CircularProgressIndicator(),
-              );
-            }
-            return (selectedIndex == 0)
-                ? ToDayWeather(position: position)
-                : WeekWeather(
-                    position: position,
-                  );
-            // getIt.get<PositionCubit>().getCurrentLocation();
-          },
-        ),
+        // Todo: weak screen !!!
+        child: (selectedIndex == 0) ? ToDayWeather() : ToDayWeather(),
+        // getIt.get<PositionCubit>().getCurrentLocation();
       ),
       bottomNavigationBar: navigationButtons(),
     );
@@ -182,3 +156,41 @@ class _HomePageState extends State<HomePage> {
     );
   }
 }
+/*
+    return FutureBuilder(
+      future: LocationHelper.handleLocationPermission(context),
+      builder: (context, snapshot) {
+        if (snapshot.hasData) {
+          return Scaffold(
+            backgroundColor: Colors.white,
+            body: MultiBlocProvider(
+              providers: [
+                BlocProvider(
+                  create: (context) => WeatherCubit(
+                    getIt.get<ImpWeatherRepository>(),
+                  ),
+                ),
+                BlocProvider(
+                  create: (context) => HourlyForecastCubit(
+                    getIt.get<ImpWeatherRepository>(),
+                  ),
+                ),
+              ],
+              child: (selectedIndex == 0)
+                  ? ToDayWeather(snapshot.data)
+                  : WeekWeather(
+                      position: snapshot.data,
+                    ),
+              // getIt.get<PositionCubit>().getCurrentLocation();
+            ),
+            bottomNavigationBar: navigationButtons(),
+          );
+        } else {
+          return Center(
+            child: Text('No Position !!!!'),
+          );
+        }
+      },
+    );
+
+ */

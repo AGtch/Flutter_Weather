@@ -4,7 +4,7 @@ import 'package:flutter_weather/features/weather/data/repositories/weather_repos
 import '../../../../core/utils/api_response.dart';
 import '../../../../core/utils/constance/strings.dart';
 import '../models/current_weather_models/current_weather.dart';
-import '../models/hourly_forecast.dart';
+import '../models/hourly_forecast_models/hourly_forecast_model.dart';
 import '../sources/server/weather_services.dart';
 
 class ImpWeatherRepository implements WeatherRepository {
@@ -28,7 +28,7 @@ class ImpWeatherRepository implements WeatherRepository {
   Future<ApiResponse<HourlyForecastModel>> getHourlyForecast(
       Map<String, dynamic> _queries) async {
     try {
-      var response =
+      dynamic response =
           await weatherServices.getHourlyForecast(weatherApiKey, _queries);
       return ApiResponse.success(response);
     } catch (error) {

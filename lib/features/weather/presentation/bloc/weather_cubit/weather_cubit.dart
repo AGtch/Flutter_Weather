@@ -3,26 +3,31 @@ import 'package:flutter_weather/features/weather/presentation/bloc/weather_cubit
 
 import '../../../../../core/utils/network_exceptions/network_exceptions.dart';
 import '../../../data/models/current_weather_models/current_weather.dart';
+import '../../../data/models/handle_weather_response.dart';
 import '../../../data/repositories/imp_weather_repository.dart';
 
-class WeatherCubit extends Cubit<WeatherResultState<CurrentWeather>> {
+class WeatherCubit extends Cubit<WeatherResultState<WeatherHandleResponse>> {
   ImpWeatherRepository impWeatherRepository;
 
   WeatherCubit(this.impWeatherRepository) : super(Idle());
 
   void getWeather({required Map<String, dynamic> query}) async {
-    var currentWeather = await impWeatherRepository.getWeather(query);
+    dynamic currentWeather = await impWeatherRepository.getWeather(query);
 
     currentWeather.when(
       success: (CurrentWeather weather) {
-        //emit(Loading());
-        print('IN WEATHER REPO');
-        print(weather);
-        // print(weatherHandleResponse.cityName);
-        emit(SuccessState(weather));
+        WeatherHandleResponse weatherHandleResponse =
+            WeatherHandleResponse.convertCurrentWeather(
+          currentWeather: weather,
+        );
+        // getIt
+        //     .get<LocalDatabaseRepository>()
+        //     .saveWeatherInLocalDatabase(weatherHandleResponse);
+        emit(SuccessState(weatherHandleResponse));
       },
       failure: (NetworkExceptions networkExceptions) {
-        print(networkExceptions.toString());
+        print(
+            "-------------------------\n ${networkExceptions.toString()} \n-------------------------");
         emit(Error(error: networkExceptions));
       },
     );

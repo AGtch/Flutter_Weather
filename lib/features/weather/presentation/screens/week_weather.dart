@@ -3,7 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:geolocator/geolocator.dart';
 
-import '../../data/models/hourly_forecast.dart';
+import '../../data/models/hourly_forecast_models/hourly_forecast_model.dart';
 import '../bloc/hourly_forecast/hourly_forecast_cubit.dart';
 import '../bloc/hourly_forecast/hourly_forecast_state.dart';
 import '../widgets/shared_widget/weather_item_factory.dart';

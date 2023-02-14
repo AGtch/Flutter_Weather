@@ -23,6 +23,7 @@ mixin _$GoogleAutoCompleteState<T> {
     required TResult Function(NetworkExceptions error) error,
   }) =>
       throw _privateConstructorUsedError;
+
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? loading,
@@ -38,6 +39,7 @@ mixin _$GoogleAutoCompleteState<T> {
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
+
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(AutocompleteLoading<T> value) loading,
@@ -45,6 +47,7 @@ mixin _$GoogleAutoCompleteState<T> {
     required TResult Function(AutocompleteError<T> value) error,
   }) =>
       throw _privateConstructorUsedError;
+
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(AutocompleteLoading<T> value)? loading,
@@ -78,6 +81,7 @@ class _$GoogleAutoCompleteStateCopyWithImpl<T, $Res,
 
   // ignore: unused_field
   final $Val _value;
+
   // ignore: unused_field
   final $Res Function($Val) _then;
 }
@@ -196,6 +200,7 @@ abstract class _$$AutocompleteSuccessCopyWith<T, $Res> {
   factory _$$AutocompleteSuccessCopyWith(_$AutocompleteSuccess<T> value,
           $Res Function(_$AutocompleteSuccess<T>) then) =
       __$$AutocompleteSuccessCopyWithImpl<T, $Res>;
+
   @useResult
   $Res call({T data});
 }
@@ -328,6 +333,7 @@ abstract class AutocompleteSuccess<T> implements GoogleAutoCompleteState<T> {
   const factory AutocompleteSuccess(final T data) = _$AutocompleteSuccess<T>;
 
   T get data;
+
   @JsonKey(ignore: true)
   _$$AutocompleteSuccessCopyWith<T, _$AutocompleteSuccess<T>> get copyWith =>
       throw _privateConstructorUsedError;
@@ -338,6 +344,7 @@ abstract class _$$AutocompleteErrorCopyWith<T, $Res> {
   factory _$$AutocompleteErrorCopyWith(_$AutocompleteError<T> value,
           $Res Function(_$AutocompleteError<T>) then) =
       __$$AutocompleteErrorCopyWithImpl<T, $Res>;
+
   @useResult
   $Res call({NetworkExceptions error});
 
@@ -480,6 +487,7 @@ abstract class AutocompleteError<T> implements GoogleAutoCompleteState<T> {
       _$AutocompleteError<T>;
 
   NetworkExceptions get error;
+
   @JsonKey(ignore: true)
   _$$AutocompleteErrorCopyWith<T, _$AutocompleteError<T>> get copyWith =>
       throw _privateConstructorUsedError;

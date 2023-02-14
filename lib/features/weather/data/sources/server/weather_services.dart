@@ -3,7 +3,7 @@ import 'package:retrofit/http.dart';
 
 import '../../../../../../core/utils/constance/strings.dart';
 import '../../models/current_weather_models/current_weather.dart';
-import '../../models/hourly_forecast.dart';
+import '../../models/hourly_forecast_models/hourly_forecast_model.dart';
 
 part 'weather_services.g.dart';
 

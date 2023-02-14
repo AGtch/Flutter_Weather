@@ -2,7 +2,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../../../../../core/utils/handle_time_data.dart';
 import '../../../../../core/utils/network_exceptions/network_exceptions.dart';
-import '../../../data/models/hourly_forecast.dart';
+import '../../../data/models/hourly_forecast_models/hourly_forecast_model.dart';
 import '../../../data/models/hourly_forecast_models/weather_in_hourly_forecast_list.dart';
 import '../../../data/repositories/imp_weather_repository.dart';
 import 'hourly_forecast_state.dart';
